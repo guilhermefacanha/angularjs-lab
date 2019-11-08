@@ -1,0 +1,28 @@
+<div class="jumbotron jumbotron-fluid" style="margin-bottom: 10; padding-bottom: 10px">
+	<div class="container">
+		<h1 class="display-3 text-center">Alurapic</h1>
+		<hr class="my-2">
+		<form style="margin-top: 50px">
+			<div class="input-group">
+				<input type="text" ng-model="filter" ng-model-options="{debounce:500}" class="form-control" placeholder="Filter Data">
+				<div class="input-group-append">
+					<button class="btn btn-secondary" type="button">
+						<i class="fa fa-search"></i>
+					</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+
+<div ng-repeat="user in users | filter: filter" class="card hideCard" style="margin-bottom: 5px">
+	<h5 class="card-header">{{user.name}}</h5>
+	<div class="card-body">
+		<p class="card-text">
+			Email: {{user.email}}
+			<br />
+			City: {{user.city}}
+		</p>
+	</div>
+</div>
