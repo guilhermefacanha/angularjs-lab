@@ -1,0 +1,9 @@
+For Tomcat host
+
+Eclipse:
+ - (Project Explorer) Servers -> Tomcat v.... -> server.xml
+ - Insert Project Location for deploy:
+ 
+  **<Host appBase="webapps"...** 
+     <Context docBase="/opt/project/angularjs-lab" path="" reloadable="true" />
+  **</Host>**
