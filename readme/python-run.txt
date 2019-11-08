@@ -1,0 +1,2 @@
+>Open Terminal
+>For Python 3, run command: python -m http.server

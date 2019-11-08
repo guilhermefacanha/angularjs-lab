@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br" ng-app="angularjs-lab">
 <head>
-<base href="/">
 <meta charset="UTF-8">
+<base href="/">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>AngularJS Lab</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -12,6 +12,18 @@
 </head>
 <body>
 	<div class="container">
+		<div class="jumbotron jumbotron-fluid" style="margin-bottom: 10; padding-bottom: 10px">
+			<div class="container">
+				<h1 class="display-3 text-center">Alurapic</h1>
+				<hr class="my-2">
+				<span class="input-group-btn">
+					<a href="#/users" class="btn btn-primary">Users</a>
+				</span>
+				<span class="input-group-btn">
+					<a href="#/users/new" class="btn btn-primary">New User</a>
+				</span>
+			</div>
+		</div>
 		<ng-view></ng-view>
 	</div>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
