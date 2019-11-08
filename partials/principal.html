@@ -12,7 +12,8 @@
 	</div>
 </form>
 </div>
-
+<p ng-show="msginfo.length" class="alert alert-info">{{msginfo}}</p>
+<p ng-show="msgerro.length" class="alert alert-danger">{{msgerro}}</p>
 <div ng-repeat="user in users | filter: filter" class="card hideCard" style="margin-bottom: 5px">
 	<h5 class="card-header">{{user.name}}</h5>
 	<div class="card-body">
@@ -20,6 +21,10 @@
 			Email: {{user.email}}
 			<br />
 			City: {{user.city}}
+		</p>
+		<p>
+			<a class="btn btn-info" href="#/users/edit/{{user.id}}">Edit</a>
+			<button class="btn btn-danger" ng-click="remove(user)">Remove</button>
 		</p>
 	</div>
 </div>

@@ -1,7 +1,13 @@
+<p ng-show="msginfo.length" class="alert alert-info">{{msginfo}}</p>
+<p ng-show="msgerro.length" class="alert alert-danger">{{msgerro}}</p>
 <div class="page-header text-center">
-	<h1>New User - {{user.name}}</h1>
+	<h1>
+		<button type="button" ng-click="generateUser()" title="Generate Random User" class="btn btn-outline-info btn-sm">
+			<i class="fa fa-refresh"></i>
+		</button>
+		New User - {{user.name}}
+	</h1>
 </div>
-
 <form name="form" class="row" ng-submit="save()" novalidate>
 	<div class="col-md-6">
 		<div class="form-group">
@@ -16,11 +22,13 @@
 		</div>
 		<div class="form-group">
 			<label>City</label>
-			<input name="city" ng-model="user.city" class="form-control" required/>
+			<select name="city" class="form-control" required ng-model="user.city" ng-options="city as (city|uppercase) for city in cities">
+				<option value="">Select a City</option>
+			</select>
 			<span ng-show="form.$submitted && form.city.$error.required" class="form-control alert-danger">*required</span>
 		</div>
 
-		<button type="submit" class="btn btn-primary">Salvar</button>
+		<button type="submit" class="btn btn-primary" ng-disabled="form.$invalid">Salvar</button>
 		<a href="/" class="btn btn-primary">Voltar</a>
 		<hr>
 	</div>
